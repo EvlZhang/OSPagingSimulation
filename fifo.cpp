@@ -19,7 +19,7 @@ void fifo(int k,int references[]){
     int len=frameList.size();
     //first reference is always a fault
     frameList.front().setRef(references[0]);
-    frameMap.find(0)->second=references[0];
+    frameMap.at(0)=references[0];
     numFaults++;
     frameList.push(frameList.front());
     frameList.pop();
