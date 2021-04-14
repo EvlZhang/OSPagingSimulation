@@ -1,7 +1,6 @@
 #include <iostream>
 #include <random>
 using namespace std;
-//working branch
 int main(){
     //read input number k
     int k;
