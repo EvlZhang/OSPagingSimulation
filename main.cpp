@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include "fifo.h"
 using namespace std;
 int main(){
     //read input number k
@@ -7,8 +8,8 @@ int main(){
     cout<<"Enter the number(k) of frames: \n";
     cin>>k;
     int alg;
-    cout<<"Enter the replacement algorithm \n";
-    cout<<"0 for FIFO, 1 for LRU, 2 for Second Chance: \n";
+    cout<<"Enter the replacement algorithm ";
+    cout<<"0 for FIFO, 1 for LRU, 2 for Second Chance: ";
     cin>>alg;
     //seeds and engine
     default_random_engine generator;
@@ -23,6 +24,15 @@ int main(){
             }
         }
     }
-
+    if(alg==0){
+        cout<<"Number of frames: "<<k<<"\n";
+        cout<<"Using Method FIFO \n";
+        fifo(k,references);
+    }
+    else if(alg==1){}
+    else if(alg==2){}
+    else{
+        cout<<"Invalid replacement algorithm, terminated!!!";
+    }
     return 0;
 }
