@@ -4,8 +4,12 @@ using namespace std;
 int main(){
     //read input number k
     int k;
-    cout<<"Enter the number(k) of frames: ";
+    cout<<"Enter the number(k) of frames: \n";
     cin>>k;
+    int alg;
+    cout<<"Enter the replacement algorithm \n";
+    cout<<"0 for FIFO, 1 for LRU, 2 for Second Chance: \n";
+    cin>>alg;
     //seeds and engine
     default_random_engine generator;
     uniform_int_distribution<long int> distribution(0,0x7FFFFFFF);
