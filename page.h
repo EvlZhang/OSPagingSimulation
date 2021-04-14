@@ -5,7 +5,7 @@ namespace P{
     class Pages{
         int frame_num;
         int reference;
-    
+        
     public:
         Pages(int num,int ref);
         Pages(int ref);
