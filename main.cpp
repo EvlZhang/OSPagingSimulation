@@ -3,6 +3,7 @@
 #include <random>
 #include "fifo.h"
 #include "lru.h"
+#include "sc.h"
 using namespace std;
 int main(){
     //read input number k
@@ -11,7 +12,8 @@ int main(){
     cin>>k;
     int alg;
     cout<<"Enter the replacement algorithm ";
-    cout<<"0 for FIFO, 1 for LRU, 2 for Second Chance: ";
+    cout<<"0 for FIFO, 1 for LRU, 2 for Second Chance,3 for ALL: \n";
+    //cout<<"If you want to run all algorithms, enter 4 \n";
     cin>>alg;
     //seeds and engine
     default_random_engine generator;
@@ -37,6 +39,18 @@ int main(){
         lru(k,references);
     }
     else if(alg==2){}
+    else if(alg==3){
+        cout<<"Number of frames: "<<k<<"\n";
+        cout<<"Using Method: FIFO \n";
+        fifo(k,references);
+        cout<<"\n";
+        cout<<"Using Method: LRU \n";
+        lru(k,references);
+        cout<<"\n";
+        cout<<"Using Method: Second Chance \n";
+        sc(k,references);
+        cout<<"\n";
+    }
     else{
         cout<<"Invalid replacement algorithm, terminated!!!";
     }
