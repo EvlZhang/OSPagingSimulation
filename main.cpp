@@ -1,6 +1,8 @@
+//Evelyn Zhang 
 #include <iostream>
 #include <random>
 #include "fifo.h"
+#include "lru.h"
 using namespace std;
 int main(){
     //read input number k
@@ -29,7 +31,11 @@ int main(){
         cout<<"Using Method FIFO \n";
         fifo(k,references);
     }
-    else if(alg==1){}
+    else if(alg==1){
+        cout<<"Number of frames: " <<k<<"\n";
+        cout<<"Using Method LRU \n";
+        lru(k,references);
+    }
     else if(alg==2){}
     else{
         cout<<"Invalid replacement algorithm, terminated!!!";
