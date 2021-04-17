@@ -1,7 +1,7 @@
 #ifndef SC_H
 #define SC_H
+#include <map>
 
-
-void sc(int k,int references[]);
+std::map<int,int> sc(int k,int references[]);
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef LRU_H
 #define LRU_H
+#include <map>
 
-
-void lru(int k,int references[]);
+std::map<int,int> lru(int k,int references[]);
 
 #endif

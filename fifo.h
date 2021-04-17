@@ -2,5 +2,6 @@
 #define FIFO_H
 #include <iostream>
 #include <list>
-void fifo(int k,int references[]);
+#include <map>
+std::map<int,int> fifo(int k,int references[]);
 #endif
