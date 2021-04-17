@@ -69,17 +69,15 @@ int main(){
         cout<<"Using Method: Second Chance \n";
         totalRefs=sc(k,references);
         cout<<"\n";
-        cout<<"Total references are the same all algorithms: \n";
+        cout<<"Total references are the same for all algorithms: \n";
     }
     else{
         cout<<"Invalid replacement algorithm, terminated!!!";
         return 1;
     }
-
     for(int i=0;i<totalRefs.size();i++){
         map<int,int>::iterator it=totalRefs.find(i);
         cout<<"Page "<<i<<" referenced "<<it->second<<" times\n";
     }
-
     return 0;
 }
