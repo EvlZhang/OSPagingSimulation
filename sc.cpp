@@ -14,7 +14,7 @@ map<int,int> sc(int k,int references[]){
     map<int,int> frameMap;
     map<int,int> totalRefs;
     //change this value if you want a different period for clearing r bits!!!!
-    int defaultTimer=5;
+    int defaultTimer=100;
     for(int i=0;i<k;i++){
         Pages newPage(i,-1,0,0);
         frameList.push_back(newPage);
